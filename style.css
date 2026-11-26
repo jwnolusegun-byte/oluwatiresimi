@@ -1,12 +1,18 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
 body {
     font-family: Georgia, serif;
-    min-height: 100vh;
     overflow: hidden;
     background: #160b16;
 }
@@ -15,7 +21,8 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    min-height: 100vh;
+    height: 100dvh;
+    min-height: 100svh;
     isolation: isolate;
     display: flex;
     justify-content: center;
@@ -34,14 +41,9 @@ body {
     object-position: center;
     z-index: 0;
     pointer-events: none;
-}
-
-
-.background-video {
-    filter: blur(25px) brightness(0.65);
+    filter: blur(25px) brightness(.65);
     transform: scale(1.08);
 }
-
 
 .movie-container::after {
     content: "";
@@ -49,9 +51,11 @@ body {
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    background: linear-gradient(180deg,
-            rgba(25, 8, 25, .30),
-            rgba(25, 8, 25, .58));
+    background: linear-gradient(
+        180deg,
+        rgba(25, 8, 25, .30),
+        rgba(25, 8, 25, .58)
+    );
 }
 
 /* WELCOME SCREEN */
@@ -81,7 +85,7 @@ body {
     animation: welcomeReveal 2s ease both;
 }
 
-.welcome-content>p,
+.welcome-content > p,
 .intro-text,
 .story-intro,
 .ending-intro {
@@ -296,187 +300,32 @@ button:hover {
     animation-delay: var(--delay), var(--delay);
 }
 
-.floating-elements span:nth-child(1) {
-    --left: 3%;
-    --size: 30px;
-    --speed: 12s;
-    --delay: 0s;
-}
-
-.floating-elements span:nth-child(2) {
-    --left: 8%;
-    --size: 22px;
-    --speed: 10s;
-    --delay: 2s;
-}
-
-.floating-elements span:nth-child(3) {
-    --left: 13%;
-    --size: 34px;
-    --speed: 14s;
-    --delay: 1s;
-}
-
-.floating-elements span:nth-child(4) {
-    --left: 18%;
-    --size: 25px;
-    --speed: 11s;
-    --delay: 4s;
-}
-
-.floating-elements span:nth-child(5) {
-    --left: 23%;
-    --size: 38px;
-    --speed: 15s;
-    --delay: 2s;
-}
-
-.floating-elements span:nth-child(6) {
-    --left: 28%;
-    --size: 22px;
-    --speed: 12s;
-    --delay: 5s;
-}
-
-.floating-elements span:nth-child(7) {
-    --left: 33%;
-    --size: 32px;
-    --speed: 13s;
-    --delay: 3s;
-}
-
-.floating-elements span:nth-child(8) {
-    --left: 38%;
-    --size: 29px;
-    --speed: 10s;
-    --delay: 1s;
-}
-
-.floating-elements span:nth-child(9) {
-    --left: 43%;
-    --size: 35px;
-    --speed: 14s;
-    --delay: 6s;
-}
-
-.floating-elements span:nth-child(10) {
-    --left: 48%;
-    --size: 30px;
-    --speed: 12s;
-    --delay: 2s;
-}
-
-.floating-elements span:nth-child(11) {
-    --left: 53%;
-    --size: 27px;
-    --speed: 15s;
-    --delay: 4s;
-}
-
-.floating-elements span:nth-child(12) {
-    --left: 58%;
-    --size: 34px;
-    --speed: 11s;
-    --delay: 5s;
-}
-
-.floating-elements span:nth-child(13) {
-    --left: 63%;
-    --size: 25px;
-    --speed: 13s;
-    --delay: 1s;
-}
-
-.floating-elements span:nth-child(14) {
-    --left: 68%;
-    --size: 32px;
-    --speed: 10s;
-    --delay: 3s;
-}
-
-.floating-elements span:nth-child(15) {
-    --left: 73%;
-    --size: 28px;
-    --speed: 14s;
-    --delay: 2s;
-}
-
-.floating-elements span:nth-child(16) {
-    --left: 78%;
-    --size: 36px;
-    --speed: 12s;
-    --delay: 6s;
-}
-
-.floating-elements span:nth-child(17) {
-    --left: 83%;
-    --size: 30px;
-    --speed: 15s;
-    --delay: 4s;
-}
-
-.floating-elements span:nth-child(18) {
-    --left: 88%;
-    --size: 24px;
-    --speed: 11s;
-    --delay: 2s;
-}
-
-.floating-elements span:nth-child(19) {
-    --left: 93%;
-    --size: 35px;
-    --speed: 13s;
-    --delay: 5s;
-}
-
-.floating-elements span:nth-child(20) {
-    --left: 97%;
-    --size: 26px;
-    --speed: 10s;
-    --delay: 3s;
-}
-
-.floating-elements span:nth-child(21) {
-    --left: 15%;
-    --size: 28px;
-    --speed: 14s;
-    --delay: 7s;
-}
-
-.floating-elements span:nth-child(22) {
-    --left: 37%;
-    --size: 35px;
-    --speed: 12s;
-    --delay: 8s;
-}
-
-.floating-elements span:nth-child(23) {
-    --left: 57%;
-    --size: 30px;
-    --speed: 15s;
-    --delay: 6s;
-}
-
-.floating-elements span:nth-child(24) {
-    --left: 76%;
-    --size: 26px;
-    --speed: 11s;
-    --delay: 7s;
-}
-
-.floating-elements span:nth-child(25) {
-    --left: 85%;
-    --size: 32px;
-    --speed: 13s;
-    --delay: 9s;
-}
-
-.floating-elements span:nth-child(26) {
-    --left: 45%;
-    --size: 24px;
-    --speed: 10s;
-    --delay: 8s;
-}
+.floating-elements span:nth-child(1)  { --left: 3%;  --size: 30px; --speed: 12s; --delay: 0s; }
+.floating-elements span:nth-child(2)  { --left: 8%;  --size: 22px; --speed: 10s; --delay: 2s; }
+.floating-elements span:nth-child(3)  { --left: 13%; --size: 34px; --speed: 14s; --delay: 1s; }
+.floating-elements span:nth-child(4)  { --left: 18%; --size: 25px; --speed: 11s; --delay: 4s; }
+.floating-elements span:nth-child(5)  { --left: 23%; --size: 38px; --speed: 15s; --delay: 2s; }
+.floating-elements span:nth-child(6)  { --left: 28%; --size: 22px; --speed: 12s; --delay: 5s; }
+.floating-elements span:nth-child(7)  { --left: 33%; --size: 32px; --speed: 13s; --delay: 3s; }
+.floating-elements span:nth-child(8)  { --left: 38%; --size: 29px; --speed: 10s; --delay: 1s; }
+.floating-elements span:nth-child(9)  { --left: 43%; --size: 35px; --speed: 14s; --delay: 6s; }
+.floating-elements span:nth-child(10) { --left: 48%; --size: 30px; --speed: 12s; --delay: 2s; }
+.floating-elements span:nth-child(11) { --left: 53%; --size: 27px; --speed: 15s; --delay: 4s; }
+.floating-elements span:nth-child(12) { --left: 58%; --size: 34px; --speed: 11s; --delay: 5s; }
+.floating-elements span:nth-child(13) { --left: 63%; --size: 25px; --speed: 13s; --delay: 1s; }
+.floating-elements span:nth-child(14) { --left: 68%; --size: 32px; --speed: 10s; --delay: 3s; }
+.floating-elements span:nth-child(15) { --left: 73%; --size: 28px; --speed: 14s; --delay: 2s; }
+.floating-elements span:nth-child(16) { --left: 78%; --size: 36px; --speed: 12s; --delay: 6s; }
+.floating-elements span:nth-child(17) { --left: 83%; --size: 30px; --speed: 15s; --delay: 4s; }
+.floating-elements span:nth-child(18) { --left: 88%; --size: 24px; --speed: 11s; --delay: 2s; }
+.floating-elements span:nth-child(19) { --left: 93%; --size: 35px; --speed: 13s; --delay: 5s; }
+.floating-elements span:nth-child(20) { --left: 97%; --size: 26px; --speed: 10s; --delay: 3s; }
+.floating-elements span:nth-child(21) { --left: 15%; --size: 28px; --speed: 14s; --delay: 7s; }
+.floating-elements span:nth-child(22) { --left: 37%; --size: 35px; --speed: 12s; --delay: 8s; }
+.floating-elements span:nth-child(23) { --left: 57%; --size: 30px; --speed: 15s; --delay: 6s; }
+.floating-elements span:nth-child(24) { --left: 76%; --size: 26px; --speed: 11s; --delay: 7s; }
+.floating-elements span:nth-child(25) { --left: 85%; --size: 32px; --speed: 13s; --delay: 9s; }
+.floating-elements span:nth-child(26) { --left: 45%; --size: 24px; --speed: 10s; --delay: 8s; }
 
 /* STORY AND ENDING SCREENS */
 
@@ -486,100 +335,90 @@ button:hover {
     inset: 0;
     z-index: 6;
     display: none;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
     color: white;
     background: rgba(25, 8, 25, .55);
+    overflow-x: hidden;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
 }
 
+/* Both screens must become visible when JavaScript adds .show */
+
+.story-screen.show,
+.ending-screen.show {
+    display: flex;
+}
+
+/* STORY SCREEN */
 
 .story-screen {
-    position: absolute;
-    inset: 0;
-    display: none;
     align-items: flex-start;
     justify-content: center;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding: 12px 15px 35px;
-    -webkit-overflow-scrolling: touch;
-}
-
-.story-screen.show {
-    display: flex;
+    padding: 20px 22px 45px;
 }
 
 .story-content {
     width: 100%;
     max-width: 650px;
-    margin: 0 auto;
-    padding: 5px 0 25px;
     flex: 0 0 auto;
+    margin: auto;
+    padding: 15px 0 25px;
+    animation: storyText 1.3s ease both;
 }
 
 .story-intro {
-    margin-bottom: 10px;
-    font-size: 10px;
+    margin-bottom: 15px;
 }
 
 .story-content h2 {
-    font-size: 30px;
-    margin-bottom: 8px;
+    color: #fff5e6;
+    font-size: clamp(25px, 5vw, 38px);
+    font-weight: normal;
+    margin-bottom: 12px;
+    text-shadow: 0 0 15px #ffb6c1;
 }
 
 .story-content .title-decoration {
-    font-size: 17px;
-    margin: 8px 0;
+    font-size: 23px;
+    margin: 12px 0;
 }
 
 .story-message {
-    font-size: 14px;
-    line-height: 1.4;
     max-width: 600px;
+    margin: 15px auto;
+    color: #fff0e8;
+    font-size: 17px;
+    line-height: 1.65;
+    white-space: pre-line;
 }
 
 .story-content button {
     display: inline-block;
-    margin: 15px auto 10px;
-    padding: 12px 25px;
-    font-size: 14px;
+    margin: 20px auto 10px;
+    padding: 14px 28px;
+    font-size: 15px;
 }
 
-@media (max-width: 600px) {
-    .story-screen {
-        padding-top: 8px;
-        padding-bottom: 25px;
-    }
+/* FINAL SCREEN */
 
-    .story-content {
-        padding-bottom: 20px;
-    }
-
-    .story-content h2 {
-        font-size: 26px;
-    }
-
-    .story-message {
-        font-size: 13px;
-        line-height: 1.35;
-    }
-
-    .story-content .title-decoration {
-        margin: 5px 0;
-        font-size: 16px;
-    }
-
-    .story-content button {
-        margin-top: 12px;
-        font-size: 13px;
-    }
+.ending-screen {
+    align-items: center;
+    justify-content: center;
+    padding: 30px 22px;
 }
 
+.ending-content {
+    width: 100%;
+    max-width: 750px;
+    flex: 0 0 auto;
+    margin: auto;
+    padding: 30px 0;
+    animation: storyText 1.5s ease both;
+}
 
 .ending-content h2 {
-    font-size: clamp(38px, 8vw, 85px);
+    font-size: clamp(34px, 8vw, 85px);
     font-weight: normal;
     letter-spacing: 5px;
     color: #fff5e6;
@@ -609,11 +448,9 @@ button:hover {
     0% {
         transform: scale(.96) translateY(12px);
     }
-
     45% {
         transform: scale(1.025) translateY(-8px);
     }
-
     100% {
         transform: scale(1.04) translateY(-8px);
     }
@@ -624,7 +461,6 @@ button:hover {
         opacity: 0;
         transform: translateY(20px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -636,7 +472,6 @@ button:hover {
         opacity: 0;
         transform: translateY(15px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -648,20 +483,16 @@ button:hover {
         transform: translateY(0) rotate(0deg) scale(.6);
         opacity: 0;
     }
-
     15% {
         opacity: .9;
     }
-
     50% {
         transform: translateY(-55vh) rotate(180deg) scale(1);
         opacity: .85;
     }
-
     85% {
         opacity: .8;
     }
-
     100% {
         transform: translateY(-115vh) rotate(360deg) scale(1.2);
         opacity: 0;
@@ -672,7 +503,6 @@ button:hover {
     from {
         filter: drop-shadow(0 0 4px rgba(255, 180, 210, .4));
     }
-
     to {
         filter: drop-shadow(0 0 14px rgba(255, 220, 240, 1));
     }
@@ -683,7 +513,6 @@ button:hover {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -695,7 +524,6 @@ button:hover {
         opacity: 0;
         transform: translateY(25px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -706,7 +534,6 @@ button:hover {
     from {
         opacity: 0;
     }
-
     to {
         opacity: 1;
     }
@@ -717,7 +544,6 @@ button:hover {
         opacity: 0;
         transform: translateY(35px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -729,7 +555,6 @@ button:hover {
         opacity: .85;
         transform: scale(.98);
     }
-
     to {
         opacity: 1;
         transform: scale(1.03);
@@ -737,13 +562,10 @@ button:hover {
 }
 
 @keyframes sparkle {
-
-    0%,
-    100% {
+    0%, 100% {
         opacity: .6;
         transform: scale(.9);
     }
-
     50% {
         opacity: 1;
         transform: scale(1.15);
@@ -753,6 +575,21 @@ button:hover {
 /* RESPONSIVE DESIGN */
 
 @media (max-width: 600px) {
+    .welcome-content > p,
+    .intro-text,
+    .story-intro,
+    .ending-intro {
+        letter-spacing: 3px;
+    }
+
+    .welcome-content span {
+        font-size: 15px;
+    }
+
+    .opening-screen {
+        padding: 20px;
+    }
+
     .memory-photo {
         max-width: 100%;
         max-height: 100%;
@@ -762,29 +599,6 @@ button:hover {
     .photo-gallery {
         width: 78vw;
         height: 42vh;
-    }
-
-    .intro-text,
-    .story-intro,
-    .ending-intro {
-        letter-spacing: 3px;
-    }
-
-    .opening-screen {
-        padding: 20px;
-    }
-
-    .welcome-content>p {
-        letter-spacing: 3px;
-    }
-
-    .welcome-content span {
-        font-size: 15px;
-    }
-
-    .story-message {
-        line-height: 1.65;
-        font-size: 16px;
     }
 
     .photo-caption {
@@ -801,8 +615,46 @@ button:hover {
         font-size: 22px;
     }
 
+    .story-screen {
+        padding: 12px 16px 30px;
+    }
+
+    .story-content {
+        padding: 8px 0 25px;
+    }
+
+    .story-content h2 {
+        font-size: 25px;
+    }
+
+    .story-content .title-decoration {
+        font-size: 18px;
+        margin: 8px 0;
+    }
+
+    .story-message {
+        font-size: 15px;
+        line-height: 1.5;
+        margin: 12px auto;
+    }
+
+    .story-content button {
+        margin-top: 16px;
+        font-size: 14px;
+        padding: 13px 22px;
+    }
+
+    .ending-screen {
+        padding: 20px 16px;
+    }
+
     .ending-content h2 {
         letter-spacing: 3px;
+    }
+
+    .ending-content p {
+        font-size: 17px;
+        line-height: 1.65;
     }
 }
 
@@ -811,26 +663,37 @@ button:hover {
         height: 40vh;
     }
 
+    .story-screen {
+        padding-top: 10px;
+    }
+
+    .story-content {
+        padding-top: 5px;
+    }
+
     .story-message {
         font-size: 15px;
-        line-height: 1.5;
+        line-height: 1.45;
     }
 
     .story-content h2 {
-        margin-bottom: 12px;
+        margin-bottom: 8px;
     }
 
     .story-content .title-decoration {
-        margin: 10px 0;
+        margin: 7px 0;
     }
 
     .story-content button {
-        margin-top: 15px;
+        margin-top: 12px;
+    }
+
+    .ending-content {
+        padding: 15px 0;
     }
 }
 
 @media (prefers-reduced-motion: reduce) {
-
     *,
     *::before,
     *::after {
