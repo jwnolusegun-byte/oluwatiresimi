@@ -94,6 +94,9 @@ function updatePhotoCaption(index) {
 function startMemoryMovie() {
     clearInterval(photoTimer);
 
+    storyScreen.classList.remove("show");
+    endingScreen.classList.remove("show");
+
     openingScreen.style.display = "none";
     photoWall.classList.add("show");
 
@@ -122,6 +125,8 @@ function showNextPhoto() {
         photoWall.classList.remove("show");
         storyScreen.classList.add("show");
 
+        storyScreen.scrollTop = 0;
+
         return;
     }
 
@@ -147,6 +152,8 @@ startButton.addEventListener("click", startMemoryMovie);
 continueButton.addEventListener("click", function () {
     storyScreen.classList.remove("show");
     endingScreen.classList.add("show");
+
+    endingScreen.scrollTop = 0;
 });
 
 backgroundVideo.addEventListener("error", function () {
